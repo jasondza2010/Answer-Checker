@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Additional Question</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'images/image1.png' %}" type="image/png">
+        <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+    </head>
+    <body>
+    {% block main %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <table width="95%" align="center" cellpadding="100"cellspacing="100">
+            <form class = "form-horizontal" name = "LoginForm" action = "/moderator/fill_in_the_blanks/" method = "POST">
+            {% csrf_token %}
+            <tr>
+                <td colspan="3"><h2 style="color: black;">Fill in the blanks choosing the correct alternative given in the brackets.</h2></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <select class="form-control input-lg" id = "chapter" name="chapter">
+                        <option selected="selected">--Select Chapter--</option>
+                        <option value="f_01_">Chapter 1: Imperialism: Geographical Discoveries and Imperialism</option>
+                        <option value="f_02_">Chapter 2: Imperialism: Imperialism in Asia</option>
+                        <option value="f_03_">Chapter 3: Imperialism: Imperialism in Africa</option>
+                        <option value="f_04_">Chapter 4: Twentieth Century: Age of Conflict: First World War</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Question:</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input class="form-control input-lg" type="text" id="question" name="question" placeholder="The imperialism in the modern period is result of ______ revolution.">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>Previously Appeared In:</h4><input class="form-control input-mg" type="text" id="prev_ppr" name="prev_ppr" placeholder="Mar-14, Oct-11">
+                </td>
+            </tr>
+            <tr class="blank_row">
+                <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr align="center">
+                <td><h4>Option 1</h4></td>
+                <td><h4>Option 2</h4></td>
+                <td><h4>Option 3</h4></td
+            </tr>
+            <tr>
+                <td><input class="form-control input-lg" type="text" id="option1" name="option1" placeholder="French"></td>
+                <td><input class="form-control input-lg" type="text" id="option2" name="option2" placeholder="Industrial"></td>
+                <td><input class="form-control input-lg" type="text" id="option3" name="option3" placeholder="Russian"></td>
+            </tr>
+            <tr class="blank_row">
+                <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr align="center">
+                <td><h3><b>Answer</b></h3></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input class="form-control input-lg" type="text" placeholder="Industrial" id="answer" name="answer"></td>
+                <td></td>
+                <td></td>
+            </tr>
+                <div class="footer navbar-inverse navbar-fixed-bottom">
+                    <div class="container">
+                        <button type="submit" name="login" class="navbar-btn btn-danger btn pull-right" >Save and Continue</button>
+                    </div>
+                </div>
+            </form>
+        </table>
+    {% endblock %}
+    </body>
+</html>

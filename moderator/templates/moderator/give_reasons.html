@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Additional Question</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'images/image1.png' %}" type="image/png">
+        <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+    </head>
+    <body>
+    {% block main %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <table width="95%" align="center">
+            <form class = "form-horizontal" name = "LoginForm" action = "/moderator/give_reasons/" method = "POST">
+            {% csrf_token %}
+            <tr>
+                <td><h2 style="color: black;">Give reasons for the following in 25 to 30 words each.</h2></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select class="form-control input-lg" id = "chapter" name="chapter">
+                        <option selected="selected">--Select Chapter--</option>
+                        <option value="g_01_">Chapter 1: Imperialism: Geographical Discoveries and Imperialism</option>
+                        <option value="g_02_">Chapter 2: Imperialism: Imperialism in Asia</option>
+                        <option value="g_03_">Chapter 3: Imperialism: Imperialism in Africa</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Question:</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input class="form-control input-lg" type="text"  id="question" name="question"placeholder="The Europeans felt the need to find out new sea routes.">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h4>Previously Appeared In:</h4><input class="form-control input-mg" id="prev_ppr" name="prev_ppr" type="text" placeholder="Mar-14, Oct-11">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Answer:</h3>
+                </td>
+            </tr>
+<tr>
+                <td colspan="2">
+                    <textarea style="width: 1300px;" class="form-control textarea" rows="4" id="answer" placeholder="In the year 1453 Constantinople (Istanbul) was conquered by the Ottoman Turks. The terrestrial way, the short way to Asia was closed down for the European traders. As there had been an increased in the business in Europe and with the short route being under the control of the Turks, the Europeans felt the need for finding out a new sea route." name="answer"></textarea></td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Constant Keyword:</h4>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea style="width: 1300px;" class="form-control textarea" rows="1" id="c_ky" placeholder="1453;Constantinople;Ottoman Turks;European traders" name="c_ky"></textarea></td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Variable Keyword:</h4>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea style="width: 1300px;" class="form-control textarea" rows="1" id="v_ky" placeholder="conquered;control;short;route" name="v_ky"></textarea>
+                </td>
+          </tr>
+                <div class="footer navbar-inverse navbar-fixed-bottom">
+                    <div class="container">
+                        <button type="submit" name="login" class="navbar-btn btn-danger btn pull-right" >Save and Continue</button>
+                    </div>
+                </div>
+            </form>
+        </table>
+    {% endblock %}
+  </body>
+</html>

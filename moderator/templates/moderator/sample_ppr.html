@@ -1,0 +1,297 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sample Paper</title>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'images/image1.png' %}" type="image/png">
+        <link rel="stylesheet" href="{% static 'css/style7.css' %}">
+    </head>
+    <body>
+    {% block content %}
+        <h6></h6>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <nav class="navbar navbar-inverse">
+            <div class="container_left">
+                <h1 style="padding-left: 12px;">Sample Paper :</h1>
+            </div>
+            <div class="container_right"  style="padding: 5px 5px 5px 5px; text-align: center;">
+                <button class="btn" onclick="location.href='{% url 'logout' %}'">&nbsp;&nbsp;Logout&nbsp;&nbsp;</button>
+                <br>
+                <br>
+                <button class="btnn" onclick="location.href='{% url 'index' %}'">Proceed</button>
+            </div>
+        </nav>
+        <br><br><br><br><br><br>
+        <hr>
+        <h3 align="center"><u>HISTORY - POLITICAL SCIENCE: PAPER I</u></h3>
+        <hr>
+        <table>
+            <tr>
+                <td style="width: 75px;padding-left: 50px;"><h3>Q1)</h3></td>
+                <td colspan="3" style="padding-left: 10px;"><h3>Complete the following statements by choosing the appropriate alternatives from those given in the brackets :</h3></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        1.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        Portuguese King ______ motivated the navigation.
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>
+                        (
+                        William, Henry, Nicholas
+                        )
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        2.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        Vasco da Gama sought business concessions from King ______ of Calicut.
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>
+                        (
+                        Jahangir, Zamorin, Shah Alam
+                        )
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        3.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        The imperialism in the modern period is result of ______ revolution.
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>
+                        (
+                        French, Industrial, Russian
+                        )
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        4.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        The Ottoman Turks conquered ______ in the year 1453.
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>
+                        (
+                        Constantinople, Calicut, Kolkata
+                        )
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td style="width: 75px;padding-left: 50px;"><h3>Q2)</h3></td>
+                <td colspan="3" style="padding-left: 10px;"><h3>Answer each of the following in 25 to 30 words : (Any 4)</h3></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        1.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        The discovery of interior part of Africa did not take place, why?
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        2.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        During the second half of 19th century which courageous European travellers came to the lime-light?
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        3.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        Give the meaning of the word ‘Imperialism’
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        4.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        In which regions of Asia European nations imposed their imperialism.
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        5.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        Why did British pay attention to Indian politics?
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td style="width: 75px;padding-left: 50px;"><h3>Q3)</h3></td>
+                <td colspan="3" style="padding-left: 10px;"><h3>Give reasons for the following in 25 to 30 words each : (Any 4)</h3></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        1.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        Africa was known as the Dark Continent until the 18th century
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        2.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        The Travelogue written by Stanley created curiosity among the European about Africa.
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        3.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        The Europeans felt the need to find out new sea routes.
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        4.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        The Portuguese couldn’t set up their empire in India.
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        5.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        China remained undivided.
+                    </h4>
+                </td>
+            </tr>
+
+        </table>
+    <br>
+    {% endblock %}
+    </body>
+</html>

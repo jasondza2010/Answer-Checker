@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instructions!!</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'images/image1.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+
+  </head>
+  <body>
+    <h1><center>Instructions!</center></h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+     <table class="table table-striped">
+        <ol type="A">
+          <tr>
+
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>A person shall be <b>disqualified</b> for being appointed as a paper-setter, translator,  chairman of the panel of paper-setters, moderator or an examiner
+            </li></td>
+          </tr>
+
+          <tr>
+            <td><li type="circle">if <b>a relative of his is sent up as a candidate</b> for the final examination, a person appointed to work as an :examiner only shall not be considered as disqualified under this subclause, if his relative has not offered the particular subject in which the person is appointed to work as an examiner</li></td>
+          </tr>
+
+          <tr>
+            <td><li type="circle">if he is having or has had during the year <b>any share in the working of a coaching class</b> for Secondary School Certificate examination, either partly or wholly; Note Tuitions imparted in special classes organised by a school shall however not constitute a disqualification under this sub-clause; If he has or had during the year, imparted private tuition of any candidate appearing for the final examination either partly or wholly</li></td>
+          </tr>
+
+          <tr>
+            <td><li type="circle">if he is the <b>author or publisher</b> of or has.; any financial interest in the publication of any guide in or annotations on any subject prescribed for the secondary course</li></td>
+          </tr>
+
+          <tr>
+            <td><li type="circle">if he <b>himself is a candidate</b> appearing for the examination.</li></td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>A person shall be disqualified for being appointed as a paper-setter, chairman of the pane/ of paper-setters in a subject, if he is the author or publisher of or has any financial interest in the publication of a text-book prescribed for the final examination in such subject or a book covering substantially the syllabus prescribed for the final examination. However, the Writer appointed by 'the State Board for, writing its text-books will not be disqualified.</li></td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>The question whether a book is a guide or a book. of annotations or a text-book of the nature  referred to in clauses (1) and (2) above shall be decided by the State Board Chairmanand his decision shall be final., </li></td>
+          </tr>
+
+        </ol>
+      </table>
+        <center>
+          <button class="btn2" style="text-align:center;" onclick="location.href='{% url 'sample_ppr' %}'">View Sample Question Paper</button>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button class="btn1" style="text-align:center;" onclick="location.href='{% url 'index' %}'">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspProceed&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+        </center>
+
+          <br>
+          <br>
+  </body>
+</html>

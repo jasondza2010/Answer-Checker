@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Instructions!!</title>
+      <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+      <link rel="shortcut icon" href="{% static 'images/image1.png' %}" type="image/png">
+      <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    </head>
+    <body>
+        <h1>
+          <center>Instructions!</center>
+        </h1>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <table class="table table-striped">
+          <ol type="A">
+            <tr>
+              <td>&nbsp&nbsp&nbsp&nbsp&nbsp;
+                <li>Marks will be awarded on the basis of the <b>completion of points/answer</b></li>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp&nbsp&nbsp&nbsp&nbsp;
+                <li>Candidates are not allowed to carry <b>cell phones, scientific watches or any type of communication device</b> inside the exam hall</li>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp&nbsp&nbsp&nbsp&nbsp;
+                <li>Candidates must submit the answer paper once else <b>his/her answers won't be considered for evaluation</b></li>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp&nbsp&nbsp&nbsp&nbsp;
+                <li>Candidates must carry a valid hall-ticket on failing to do so he can be barred from <b>appearing for the exam</b></li>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp&nbsp&nbsp&nbsp&nbsp;
+                <li>Candidates won't be allowed to leave the examination center <b>30 minutes after the exam starts or 10 minutes before the exam ends</b></li>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp&nbsp&nbsp&nbsp&nbsp;
+                <li><b>Smoking</b> is prohibited inside the examination center</li>
+              </td>
+            </tr>
+        </ol>
+      </table>
+        <center>
+          <button class="btn2" style="text-align:center;" onclick="location.href='{% url 'indexx' %}'">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspProceed&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+        </center>
+
+          <br>
+          <br>
+  </body>
+</html>

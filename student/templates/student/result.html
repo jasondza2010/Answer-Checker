@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Result</title>
+        <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+        <link rel="shortcut icon" href="{% static 'images/image1.png' %}" type="image/png">
+    </head>
+    <body>
+        <h1>
+            <span class="yellow">Result</span>
+            <span class="blue">&lt;</span>{{username}}<span class="blue">&gt;</span>
+        </h1>
+        <h2 style="font-size: 24px;">
+            <b>History May 2017</b>
+        </h2>
+        <table class="container">
+	        <thead>
+		        <tr style="font-size: 24px;">
+                    <th><h1><b>Question</b></h1></th>
+                    <th><h1><b>1</b></h1></th>
+                    <th><h1><b>2</b></h1></th>
+                    <th><h1><b>3</b></h1></th>
+                    <th><h1><b>4</b></h1></th>
+                    <th><h1><b>5</b></h1></th>
+                    <th><h1><b>Total</b></h1></th>
+		        </tr>
+	        </thead>
+	        <tbody>
+		        <tr>
+			        <td>Fill in the blanks choosing the correct alternative given in the brackets.</td>
+			        <td>{{q11}}</td>
+			        <td>{{q12}}</td>
+			        <td>{{q13}}</td>
+			        <td>{{q14}}</td>
+			        <td>-</td>
+			        <td><b>{{q1_tot}}/4</b></td>
+		        </tr>
+		        <tr>
+			        <td>Answer the following questions in 20 to 25 words each.</td>
+			        <td>{{q21}}</td>
+			        <td>{{q22}}</td>
+			        <td>{{q23}}</td>
+			        <td>{{q24}}</td>
+			        <td>{{q25}}</td>
+			        <td><b>{{q2_tot}}/8</b></td>
+                </tr>
+		        <tr>
+			        <td>Give reasons for the following in 25 to 30 words each.</td>
+			        <td>{{q31}}</td>
+			        <td>{{q32}}</td>
+			        <td>{{q33}}</td>
+			        <td>{{q34}}</td>
+			        <td>{{q35}}</td>
+			        <td><b>{{q3_tot}}/8</b></td>
+		        </tr>
+		        <tr>
+                    <td><b>Total</b></td>
+			        <td colspan="6"  style="text-align: center;"><b>{{tot}}/20</b></td>
+		        </tr>
+	        </tbody>
+        </table>
+    </body>
+</html>

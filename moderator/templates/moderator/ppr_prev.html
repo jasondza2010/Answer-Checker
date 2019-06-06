@@ -1,0 +1,306 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Question Paper Preview</title>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'images/image1.png' %}" type="image/png">
+        <link rel="stylesheet" href="{% static 'css/sweetalert.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/style7.css' %}">
+    </head>
+    <body>
+    {% block content %}
+        <h6></h6>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script>
+            swal({
+                title: "Success!",
+                text: "Paper Created Successfully",
+                timer: 2000,
+                showConfirmButton: false
+            });
+        </script>
+        <nav class="navbar navbar-inverse">
+            <div class="container_left">
+                <h1 style="padding-left: 12px;">Question Paper Preview :</h1>
+            </div>
+            <div class="container_right"  style="padding: 5px 5px 5px 5px; text-align: center;">
+                <br>
+                <button class="btn" onclick="location.href='{% url 'logout' %}'">Logout</button>
+            </div>
+        </nav>
+        <br><br><br><br>
+        <hr>
+
+        <h3 align="center"><u>HISTORY - POLITICAL SCIENCE: PAPER I</u></h3>
+        <hr>
+        <table>
+            <tr>
+                <td style="width: 75px;padding-left: 50px;"><h3>Q1)</h3></td>
+                <td colspan="3" style="padding-left: 10px;"><h3>Complete the following statements by choosing the appropriate alternatives from those given in the brackets :</h3></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        1.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ f1.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>
+                        (
+                        {{ f1.options }}
+                        )
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        2.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ f2.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>
+                        (
+                        {{ f2.options }}
+                        )
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        3.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ f3.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>
+                        (
+                        {{ f3.options }}
+                        )
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        4.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ f4.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <h4>
+                        (
+                        {{ f4.options }}
+                        )
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td style="width: 75px;padding-left: 50px;"><h3>Q2)</h3></td>
+                <td colspan="3" style="padding-left: 10px;"><h3>Answer each of the following in 25 to 30 words : (Any 4)</h3></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        1.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ a1.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        2.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ a2.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        3.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ a3.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        4.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ a4.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        5.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ a5.question }}
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td style="width: 75px;padding-left: 50px;"><h3>Q3)</h3></td>
+                <td colspan="3" style="padding-left: 10px;"><h3>Give reasons for the following in 25 to 30 words each : (Any 4)</h3></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        1.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ g1.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        2.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ g2.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        3.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ g3.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        4.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ g4.question }}
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h4>
+                        5.
+                    </h4>
+                </td>
+                <td>
+                    <h4>
+                        {{ g5.question }}
+                    </h4>
+                </td>
+            </tr>
+
+        </table>
+    <script src="{% static 'sweetalert.min.js' %}"></script>
+    <br>
+    {% endblock %}
+    </body>
+</html>

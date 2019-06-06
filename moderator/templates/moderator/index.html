@@ -1,0 +1,349 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Moderator</title>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'images/image1.png' %}" type="image/png">
+        <link rel="stylesheet" href="{% static 'css/style6.css' %}">
+        <link rel="stylesheet" href="{% static 'css/sweetalert.css' %}" type="text/css">
+    </head>
+    <body>
+        <h4></h4>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        {% block content %}
+            <form class="form-wrapper" method="POST" id="new_user_form" action="{% url 'index' %}">
+                {% csrf_token %}
+                        <fieldset class="section is-active">
+                            <nav class="navbar navbar-inverse navbar-fixed-top">
+                                <div class="container_left">
+                                    <h2 style="text-align: left;"><i>&nbsp&nbsp&nbspQuestion No 1:</i></h2>
+                                    <h1>&nbsp&nbsp&nbspFill in the blanks choosing the correct alternative given in the brackets.</h1>
+                                </div>
+                                <div class="container_right"  style="padding: 5px 5px 5px 5px;">
+                                    <br>
+                                    <a class="btnn"  onclick="location.href='{% url 'fill_in_the_blanks' %}'">Add a Question</a>
+                                    <br><br>
+                                    <a class="btn" onclick="location.href='{% url 'logout' %}'">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLogout&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                </div>
+                            </nav>
+                            <br><br><br><br><br>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 1: Imperialism: Geographical Discoveries and Imperialism</h3>
+                                    </td>
+                                </tr>
+                                {% for i in f_01 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'fill_in_the_blanks_detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.options }})</h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 2: Imperialism: Imperialism in Asia</h3>
+                                    </td>
+                                </tr>
+                                {% for i in f_02 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'fill_in_the_blanks_detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.options }})</h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 3: Imperialism: Imperialism in Africa</h3>
+                                    </td>
+                                </tr>
+                                {% for i in f_03 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'fill_in_the_blanks_detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.options }})</h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 4: Twentieth Century- Age of Conflict: First World War</h3>
+                                    </td>
+                                </tr>
+                                {% for i in f_04 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'fill_in_the_blanks_detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.options }})</h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                            <br><br>
+                            <div class="footer navbar-inverse navbar-fixed-bottom">
+                                <div class="button">Next Question</div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="section">
+                            <nav class="navbar navbar-inverse navbar-fixed-top">
+                                <div class="container_left">
+                                    <h2 style="text-align: left;"><i>&nbsp&nbsp&nbspQuestion No 2:</i></h2>
+                                    <h1>&nbsp&nbsp&nbspAnswer the following questions in 20 to 25 words each:</h1>
+                                </div>
+                                <div class="container_right"  style="padding: 5px 5px 5px 5px;">
+                                    <br>
+                                    <a class="btnn"  onclick="location.href='{% url 'ans_the_foll' %}'">Add a Question</a>
+                                    <br><br>
+                                    <a class="btn" onclick="location.href='{% url 'logout' %}'">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLogout&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                </div>
+                            </nav>
+                            <br><br><br><br><br>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 1: Imperialism: Geographical Discoveries and Imperialism</h3>
+                                    </td>
+                                </tr>
+                                {% for i in a_01 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'ans_the_foll__detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 2: Imperialism: Imperialism in Asia</h3>
+                                    </td>
+                                </tr>
+                                {% for i in a_02 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'ans_the_foll__detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 3: Imperialism: Imperialism in Africa</h3>
+                                    </td>
+                                </tr>
+                                {% for i in a_03 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'ans_the_foll__detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 4: Twentieth Century- Age of Conflict: First World War</h3>
+                                    </td>
+                                </tr>
+                                {% for i in a_04 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'ans_the_foll__detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                            <br><br>
+                            <div class="footer navbar-inverse navbar-fixed-bottom">
+                                <div class="button">Next Question</div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="section">
+                            <nav class="navbar navbar-inverse navbar-fixed-top">
+                                <div class="container_left">
+                                    <h2 style="text-align: left;"><i>&nbsp&nbsp&nbspQuestion No 3:</i></h2>
+                                    <h1>&nbsp&nbsp&nbspGive reasons for the following in 25 to 30 words each:</h1>
+                                </div>
+                                <div class="container_right"  style="padding: 5px 5px 5px 5px;">
+                                    <br>
+                                    <a class="btnn"  onclick="location.href='{% url 'give_reasons' %}'">Add a Question</a>
+                                    <br><br>
+                                    <a class="btn" onclick="location.href='{% url 'logout' %}'">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLogout&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                </div>
+                            </nav>
+                            <br><br><br><br><br>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 1: Imperialism: Geographical Discoveries and Imperialism</h3>
+                                    </td>
+                                </tr>
+                                {% for i in g_01 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'give_reason_detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 2: Imperialism: Imperialism in Asia</h3>
+                                    </td>
+                                </tr>
+                                {% for i in g_02 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'give_reason_detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 3: Imperialism: Imperialism in Africa</h3>
+                                    </td>
+                                </tr>
+                                {% for i in g_03 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'give_reason_detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td colspan="4">
+                                        <h3>&nbsp&nbsp&nbsp&nbspChapter 4: Twentieth Century- Age of Conflict: First World War</h3>
+                                    </td>
+                                </tr>
+                                {% for i in g_04 %}
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'give_reason_detail' i.pk %}" style="text-decoration:none">
+                                                    <h4> {{ i.question }} </h4>
+                                                    <h4>&nbsp&nbsp&nbsp({{ i.prev_ppr }})</h4>
+                                                    <input id="{{ i.q }}" type="checkbox" name="checks" value="{{ i.q }}"/>
+                                                    <label for="{{ i.q }}"><i class="fa fa-check"></i></label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                            <script src="{% static 'sweetalert.min.js' %}"></script>
+                            <div class="footer navbar-inverse navbar-fixed-bottom">
+                                <div class="container">
+                                    <button class="submit button" type="submit">Generate Question Paper</button>
+                                </div>
+                            </div>
+                        </fieldset>
+
+            </form>
+        {% endblock %}
+        <br><br>
+        <script src="{% static 'js/index.js' %}"></script>
+    </body>
+</html>
